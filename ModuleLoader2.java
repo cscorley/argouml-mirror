@@ -623,6 +623,7 @@ public final class ModuleLoader2 {
             
             LOG.info("Reading profiles...");
             loadProfilesFromJarFile(jarfile, file);
+            Translator.addClassLoader(classloader);
         } else {
             LOG.error("Failed to find any loadable ArgoUML modules in jar "
                     + file);
